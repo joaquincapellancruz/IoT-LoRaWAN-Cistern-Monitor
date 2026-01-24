@@ -34,4 +34,4 @@ The system calculates the remaining volume ($V$) based on the sensor measurement
 
 $$V = \text{Area} \times (H - h_{measured})$$
 
-> **Note:** Validated with an absolute error average of only 0.20 gallons (0.66%).
+> **Note:** Validated with an absolute error average of only 0.20 gallons.
