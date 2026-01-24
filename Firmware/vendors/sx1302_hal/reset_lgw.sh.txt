@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Pines definidos (líneas BCM)
+SX1302_RESET_PIN=23
+SX1302_POWER_EN_PIN=18
+SX1261_RESET_PIN=22
+AD5338R_RESET_PIN=13
+
+CHIP=gpiochip0
+
+echo "Reset SX1302 (GPIO$SX1302_RESET_PIN)"
+gpioset $CHIP $SX1302_RESET_PIN=1
+sleep 0.1
+gpioset $CHIP $SX1302_RESET_PIN=0
+sleep 0.1
+
+echo "Reset SX1261 (GPIO$SX1261_RESET_PIN)"
+gpioset $CHIP $SX1261_RESET_PIN=1
+sleep 0.1
+gpioset $CHIP $SX1261_RESET_PIN=0
+sleep 0.1
+
+echo "Reset AD5338R (GPIO$AD5338R_RESET_PIN)"
+gpioset $CHIP $AD5338R_RESET_PIN=1
+sleep 0.1
+gpioset $CHIP $AD5338R_RESET_PIN=0
+sleep 0.1
+
+echo "Enable SX1302 Power (GPIO$SX1302_POWER_EN_PIN)"
+gpioset $CHIP $SX1302_POWER_EN_PIN=1
